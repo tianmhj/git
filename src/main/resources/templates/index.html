@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<table>
+<tr>
+<td>编号</td>
+<td>姓名</td>
+<td>菜单</td>
+
+
+</tr>
+<tr th:each="i,j:${list}">
+<td th:text="${i.id}"></td>
+<td th:text="${i.name}"></td>
+
+<td><a th:href="@{'/selectone?id='+${i.id}}">编辑</a> </td>
+<td><a th:href="@{'/remove?id='+${i.id}}">删除</a></td>
+
+</tr>
+
+</table>
+
+</body>
+</html>

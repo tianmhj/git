@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="#" th:action="@{/update}">
+<input type="text" hidden="hidden" name="id" th:value="${u.id}">
+用户名：<input type="text" th:value="${u.name}" name="name">
+密码：<input type="password" th:value="${u.pwd}" name="pwd">
+保存：<input type="submit">
+</form>
+</body>
+</html>
